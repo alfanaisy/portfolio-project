@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Navbar from './components/Navbar';
 import ProjectItem from './components/ProjectItem';
+import CopyEmail from './components/CopyEmail';
 
 const projects = [
   {
@@ -56,9 +57,9 @@ export default function Home() {
               )
             )}
           </div>
-          <h4 className="text-center text-xl lg:text-3xl font-medium my-8">
+          <h4 className="text-center text-xl lg:text-3xl font-medium my-16">
             See more on my{' '}
-            <span className="text-blue-600">
+            <span className="hover:underline">
               <Link href={'https://github.com/alfanaisy'} target="_blank">
                 Github
               </Link>
@@ -66,7 +67,7 @@ export default function Home() {
           </h4>
         </section>
 
-        <section className="my-20 lg:px-36 space-y-4">
+        <section className="py-20 lg:px-36 space-y-4">
           <p className="text-lg text-left leading-relaxed ">
             I&apos;m Alfan, a full-stack web developer with a passion for
             building dynamic, scalable web applications. With a strong
@@ -80,6 +81,14 @@ export default function Home() {
             <Link href={'/about'}>More about me</Link>
           </p>
         </section>
+        <section className="py-10 mb-28 lg:px-36">
+          <CopyEmail />
+        </section>
+        <footer className="py-4 lg:px-36">
+          <p className="text-slate-500 text-sm text-center">
+            @ Alfan Aisy 2024
+          </p>
+        </footer>
       </main>
     </div>
   );
