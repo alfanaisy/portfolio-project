@@ -1,13 +1,22 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
-const ProjectItem = () => {
+interface Props {
+  imageSrc: string;
+  imageDesc: string;
+  title: string;
+  subtitle: string;
+  url: string;
+}
+
+const ProjectItem = ({ imageSrc, imageDesc, title, subtitle, url }: Props) => {
   return (
     <div className="group relative w-full lg:w-[calc(50%-60px)] h-[80vh] z-10 cursor-pointer lg:project-item">
       <div className="w-full h-full rounded-3xl overflow-hidden group-hover:scale-[98%] duration-700">
         <Image
-          src={'/game-hub.png'}
-          alt={'Game Hub'}
+          src={imageSrc}
+          alt={imageDesc}
           fill={true}
           objectFit="cover"
           objectPosition="center"
@@ -15,8 +24,12 @@ const ProjectItem = () => {
         />
       </div>
       <div className="text-black text-center mt-6 text-lg gr">
-        <p className="font-medium">Game Hub</p>
-        <p className="font-extralight text-slate-500">Video Game Catalogue</p>
+        <p className="font-medium">
+          <Link href={url} target="_blank">
+            {title}
+          </Link>
+        </p>
+        <p className="font-extralight text-slate-500">{subtitle}</p>
       </div>
     </div>
   );
