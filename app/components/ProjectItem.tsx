@@ -3,7 +3,7 @@ import React from 'react';
 
 const ProjectItem = () => {
   return (
-    <div className="group relative w-full md:w-[35vw] h-[80vh] z-10 cursor-pointer ">
+    <div className="group relative w-full lg:w-[calc(50%-60px)] h-[80vh] z-10 cursor-pointer lg:project-item">
       <div className="w-full h-full rounded-3xl overflow-hidden group-hover:scale-[98%] duration-700">
         <Image
           src={'/game-hub.png'}

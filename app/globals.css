@@ -41,8 +41,9 @@ body {
     animation-delay: 500ms;
   }
 
-  /* other custom util */
-  .item-staggered:nth-child(2n) {
-    margin-top: 20px; /* Adjust margin for stagger effect */
+  /* project item layouting */
+  .project-item:nth-child(2n-2) {
+    position: relative;
+    top: 300px;
   }
 }
