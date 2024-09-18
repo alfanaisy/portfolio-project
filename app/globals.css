@@ -15,4 +15,34 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* custom keyframes */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animation-slide-up {
+    animation: slideUp 0.5s ease-out;
+    animation-fill-mode: backwards;
+  }
+
+  /* custom animation delays */
+  .animation-delay-2 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-3 {
+    animation-delay: 500ms;
+  }
+
+  /* other custom util */
+  .item-staggered:nth-child(2n) {
+    margin-top: 20px; /* Adjust margin for stagger effect */
+  }
 }
