@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Navbar from './components/Navbar';
 import ProjectItem from './components/ProjectItem';
 import CopyEmail from './components/CopyEmail';
 
