@@ -18,8 +18,7 @@ const ProjectItem = ({ imageSrc, imageDesc, title, subtitle, url }: Props) => {
           src={imageSrc}
           alt={imageDesc}
           fill={true}
-          objectFit="cover"
-          objectPosition="center"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
           className="rounded-3xl group-hover:scale-110 duration-700"
         />
       </div>
